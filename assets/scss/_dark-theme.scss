@@ -1,0 +1,110 @@
+.dark-theme {
+    background: #131313;
+
+    .dark-img {
+        display: block;
+    }
+
+    .light-img {
+        display: none;
+    }
+
+    .logo {
+        color: #FFF;
+    }
+
+    .btn {
+        &-main {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+            background: linear-gradient(143deg, rgba(33, 33, 33, 0.6) 0%, rgba(33, 33, 33, 0.2) 100%);
+            color: #A5A5A5;
+
+            svg path {
+                fill: #A5A5A5;
+            }
+        }
+    }
+
+    .lang-page {
+        &__container {
+            position: relative;
+            background: transparent;
+            overflow: hidden;
+            z-index: 1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(94, 94, 94, 0.05) 70.83%, rgba(28, 28, 28, 0) 95.31%);
+                opacity: 0.5;
+            }
+
+        }
+    }
+
+    // Theme page
+    .theme-page {
+        &__container::before {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(94, 94, 94, 0.05) 70.83%, rgba(28, 28, 28, 0) 95.31%);
+        }
+        
+        h3 {
+            color: #FFF;
+        }
+
+        p {
+            color: #A5A5A5;
+        }
+    }
+    // Theme page end
+
+    // Settings page
+    .settings-page {
+        &__container {
+            &::before {
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 0%, rgba(94, 94, 94, 0.05) 70.83%, rgba(28, 28, 28, 0) 95.31%);
+            }
+        }
+
+        h2 {
+            color: #FFF;
+        }
+
+        .content-head {
+            h3 {
+                color: #A5A5A5;
+            }
+
+            p {
+                color: #A5A5A5;
+            }
+        }
+
+        .content-body {
+            h3 {
+                color: #A5A5A5;
+            }
+
+            .btns-wrap {
+                button {
+                    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+                    background: linear-gradient(143deg, rgba(33, 33, 33, 0.6) 0%, rgba(33, 33, 33, 0.2) 100%);
+                    color: #A5A5A5;
+                }
+            }
+        }
+
+        .save-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 75px 0;
+        }
+    }
+    // Settings page end
+}
