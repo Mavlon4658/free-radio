@@ -58,19 +58,64 @@ if (darkBlock) {
     }
 }
 
-// Navs Voice Slider
-const voiceRange = document.querySelector('.voice-range');
+const voiseRanges = document.querySelectorAll('.voise-range');
 
-if (voiceRange) {
-    const updateVoiceSlider = (range) => {
-        const value = (range.value - range.min) / (range.max - range.min) * 100;
-        range.style.background = `linear-gradient(to right, #FB9E60 0%, #F57173 ${value}%, #d3d3d3 ${value}%, #d3d3d3 100%)`;
+if (voiseRanges.length) {
+    voiseRanges.forEach(el => {
+        const inp = el.querySelector('input');
+        const line = el.querySelector('.line');
+        const minVal = +el.querySelector('input').min;
+        const maxVal = +el.querySelector('input').max;
+
+        const makeLine = () => {
+            line.style.width = (100 *(+inp.value - minVal)) / (maxVal - minVal) + '%'
+        }
+
+        makeLine();
+
+        inp.oninput = () => makeLine();
+    })
+}
+
+const lang = document.querySelector('.lang');
+const langBtn = document.querySelector('.lang-btn');
+const langList = document.querySelectorAll('.lang-list li');
+
+if (lang) {
+    langBtn.onclick = () => {
+        lang.classList.toggle('active');
     }
 
-    // Initialize
-    updateVoiceSlider(voiceRange);
+    langList.forEach((list, listIdx) => {
+        list.onclick = () => {
+            lang.classList.remove('active');
+            lang.querySelector('span').textContent = list.textContent;
+            lang.querySelector('input').value = list.textContent;
 
-    voiceRange.addEventListener('input', function() {
-        updateVoiceSlider(this);
-    });
+            langList.forEach((el, elIdx) => {
+                if (elIdx == listIdx) {
+                    el.classList.add('selected');
+                } else {
+                    el.classList.remove('selected');
+                }
+            })
+        }
+    })
 }
+
+const starBtn = document.querySelectorAll('.star-btn');
+if (starBtn.length) {
+    starBtn.forEach(btn => {
+        btn.onclick = () => {
+            btn.classList.toggle('active');
+        }
+    })
+}
+
+window.addEventListener('click', function (e) {
+    if (lang) {
+        if (!lang.contains(e.target)) {
+            lang.classList.remove('active')
+        }
+    }
+})
