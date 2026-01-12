@@ -119,3 +119,14 @@ window.addEventListener('click', function (e) {
         }
     }
 })
+
+const viewBtn = document.querySelector('.view-btn');
+const channelCard = document.querySelector('.channel-card__wrap');
+const channelList = document.querySelector('.channel-list');
+
+if (viewBtn) {
+    viewBtn.onclick = () => {
+        channelCard.classList.toggle('d-none');
+        channelList.classList.toggle('d-none');
+    }
+}
