@@ -20,11 +20,11 @@ const darkBlock = document.querySelector('.dark-block');
 const lightBlock = document.querySelector('.light-block');
 
 const changeTheme = () => {
-    if (localStorage.getItem('theme') == 'light-mode') {
-        document.querySelector('body').classList.remove('dark-theme')
-    } else {
-        document.querySelector('body').classList.add('dark-theme')
-    }
+    // if (localStorage.getItem('theme') == 'light-mode') {
+    //     document.querySelector('body').classList.remove('dark-theme')
+    // } else {
+    //     document.querySelector('body').classList.add('dark-theme')
+    // }
 }
 
 

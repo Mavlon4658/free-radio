@@ -315,7 +315,7 @@ input[type=number]::-webkit-outer-spin-button {
   color: #FFF;
 }
 .dark-theme .navs-bottom {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(28, 28, 28, 0) 100%);
+  background: #1b1b1b;
 }
 .dark-theme .navs-bottom__content {
   margin-top: 20px;
@@ -782,6 +782,7 @@ div {
 
 .navs {
   width: 100%;
+  padding-bottom: 135px;
 }
 .navs-head {
   display: flex;
@@ -822,9 +823,14 @@ div {
   gap: 4px;
 }
 .navs-bottom {
-  background: linear-gradient(180deg, #f9f9f9 0%, rgba(250, 250, 250, 0) 100%);
+  background: #f9f9f9;
   border-radius: 49px 40px 0 0;
   padding: 20px 0 32px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 .navs-bottom__content {
   margin-top: 20px;
