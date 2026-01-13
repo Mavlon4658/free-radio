@@ -299,6 +299,9 @@ input[type=number]::-webkit-outer-spin-button {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
   background: linear-gradient(143deg, #212121 0%, #212121 100%);
 }
+.dark-theme .navs {
+  background: #131313;
+}
 .dark-theme .navs-head__img {
   background: #202020;
   box-shadow: none;
@@ -623,6 +626,9 @@ div {
   justify-content: flex-end;
 }
 
+.channel {
+  padding-bottom: 190px;
+}
 .channel-container {
   position: relative;
   z-index: 2;
@@ -782,7 +788,12 @@ div {
 
 .navs {
   width: 100%;
-  padding-bottom: 135px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background: white;
 }
 .navs-head {
   display: flex;
@@ -826,11 +837,6 @@ div {
   background: #f9f9f9;
   border-radius: 49px 40px 0 0;
   padding: 20px 0 32px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
 }
 .navs-bottom__content {
   margin-top: 20px;

@@ -317,6 +317,8 @@ div {
 
 // Channel
 .channel {
+    padding-bottom: 190px;
+
     &-container {
         position: relative;
         z-index: 2;
@@ -497,7 +499,12 @@ div {
 // Navs
 .navs {
     width: 100%;
-    padding-bottom: 135px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background: white;
 
     &-head {
         display: flex;
@@ -550,11 +557,6 @@ div {
         background: #f9f9f9;
         border-radius: 49px 40px 0 0;
         padding: 20px 0 32px;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        z-index: 2;
         
         &__content {
             margin-top: 20px;
